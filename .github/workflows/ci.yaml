@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - 'src/**'
+      - '.github/workflows/ci.yaml'
 jobs:
   Sync-ho-raha-hai:
     runs-on: ubuntu-latest
