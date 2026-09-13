@@ -7,7 +7,7 @@ on:
     paths:
       - 'src/**'
 jobs:
-  Sync ho raha h:
+  Sync-ho-raha-hai:
     runs-on: ubuntu-latest
     steps:
       -
