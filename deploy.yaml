@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bhadwu-app
+  labels:
+    app: bhadwu-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: bhadwu-app
+  template:
+    metadata:
+      labels:
+        app: bhadwu-app
+    spec:
+      containers:
+      - name: bhadwu-app
+        image: bhadwu-app-v1:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 5000

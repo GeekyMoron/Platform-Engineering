@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: bhadwu-app-lb
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: bhadwu-app.chudapad.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: bhadwu-app-service
+            port:
+              number: 8080

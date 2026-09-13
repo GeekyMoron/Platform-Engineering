@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: bhadwu-app-service
+  labels:
+    app: bhadwu-app
+spec:
+  selector:
+    app: bhadwu-app
+  ports:
+  - name: bhadwu-app
+    protocol: TCP
+    port: 8080
+    targetPort: 5000
+#where the app will run is target port and where it is accessible to the outside world is port. so we are exposing 8080 to the outside world and the app will run on 5000
