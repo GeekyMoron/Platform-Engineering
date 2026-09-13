@@ -21,4 +21,4 @@ jobs:
         uses: docker/build-push-action@v7
         with:
           push: true
-          tags: nikhildock345/bhadwu-app:${{ github.sha::8 }}
+          tags: nikhildock345/bhadwu-app:${{ github.sha }}
